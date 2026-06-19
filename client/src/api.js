@@ -10,6 +10,13 @@ api.interceptors.request.use((config) => {
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
+  // Debug: log request headers to help diagnose 401s
+  try {
+    // avoid circular structure issues
+    const safeHeaders = { ...config.headers };
+    // eslint-disable-next-line no-console
+    console.log('API request', config.method, config.url, safeHeaders);
+  } catch (e) {}
   return config;
 });
 
