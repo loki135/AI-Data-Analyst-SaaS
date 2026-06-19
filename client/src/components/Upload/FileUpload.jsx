@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
-import axios from 'axios';
+import api from '../../api';
 import { useNavigate } from 'react-router-dom';
 
 export default function FileUpload() {
@@ -19,7 +19,7 @@ export default function FileUpload() {
     try {
       const formData = new FormData();
       formData.append('file', acceptedFiles[0]);
-      const res = await axios.post('/api/upload', formData, {
+      const res = await api.post('/api/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       navigate(`/analysis/${res.data.id}`);

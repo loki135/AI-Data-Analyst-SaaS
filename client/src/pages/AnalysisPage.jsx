@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import SummaryCards from '../components/Dashboard/SummaryCards';
 import InsightPanel from '../components/Dashboard/InsightPanel';
 import DataTable from '../components/Dashboard/DataTable';
@@ -22,7 +22,7 @@ export default function AnalysisPage() {
   useEffect(() => {
     const fetchDataset = async () => {
       try {
-        const res = await axios.get(`/api/analysis/${id}`);
+          const res = await api.get(`/api/analysis/${id}`);
         setDataset(res.data);
         const numericCol = res.data.columns.find((c) => c.type === 'numeric');
         const firstCol = res.data.columns[0];

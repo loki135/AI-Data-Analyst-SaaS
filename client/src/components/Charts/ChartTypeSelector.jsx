@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../../api';
 
 const CHART_TYPES = ['bar', 'line', 'pie'];
 
@@ -14,7 +14,7 @@ export default function ChartTypeSelector({ columns, datasetId, config, setConfi
     setSuggesting(true);
     setReason('');
     try {
-      const res = await axios.post('/api/ai/suggest-chart', { datasetId });
+      const res = await api.post('/api/ai/suggest-chart', { datasetId });
       const { type, x, y, reason: r } = res.data;
       setConfig({
         type: CHART_TYPES.includes(type) ? type : 'bar',

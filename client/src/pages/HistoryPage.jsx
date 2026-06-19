@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import { useAuth } from '../context/AuthContext';
 
 export default function HistoryPage() {
@@ -11,7 +11,7 @@ export default function HistoryPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('/api/analysis')
+    api.get('/api/analysis')
       .then((res) => setDatasets(res.data))
       .catch(() => {})
       .finally(() => setLoading(false));
@@ -22,7 +22,7 @@ export default function HistoryPage() {
     if (!window.confirm('Delete this dataset?')) return;
     setDeleting(id);
     try {
-      await axios.delete(`/api/analysis/${id}`);
+      await api.delete(`/api/analysis/${id}`);
       setDatasets((ds) => ds.filter((d) => d._id !== id));
     } catch {
       alert('Failed to delete dataset');

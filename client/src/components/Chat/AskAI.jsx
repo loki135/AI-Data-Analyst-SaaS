@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../api';
 import { useAuth } from '../../context/AuthContext';
 
 const EXAMPLES = [
@@ -27,7 +27,7 @@ export default function AskAI({ datasetId }) {
     setInput('');
     setLoading(true);
     try {
-      const res = await axios.post(
+      const res = await api.post(
         '/api/ai/ask',
         { datasetId, question },
         { headers: token ? { Authorization: `Bearer ${token}` } : {} }

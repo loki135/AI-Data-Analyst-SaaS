@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../../api';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ export default function Register({ onSwitch }) {
     }
     setLoading(true);
     try {
-      const res = await axios.post('/api/auth/register', form);
+      const res = await api.post('/api/auth/register', form);
       login(res.data.token, res.data.user);
       navigate('/', { replace: true });
     } catch (err) {
