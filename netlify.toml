@@ -1,0 +1,4 @@
+[build]
+  base    = "client"
+  command = "npm install && ./node_modules/.bin/vite build"
+  publish = "client/dist"
