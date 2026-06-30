@@ -1,1 +1,33 @@
-User-agent: * Disallow:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+<title>DataLens AI – AI-Powered CSV Analyzer</title>
+<meta name="description" content="Upload CSV files and get instant AI insights, charts, and Q&A powered by Gemini.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-3a5e07dc.png">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACE0lEQVR4AaSRSWtTYRSGn9zaDE3quJC22tmpRcFuShW0tbU41JUiFhFcFkXdCP6MuhYq7owbF6JYF1ZSXBilxJI2rWYerDU1om1ipntvvN8NCYRkIe0H7xm+w/tw4EiqqhZUdfOS2OKrCfixnv9vbBXAvZomuJblqSPN9Ewa55sMjpdpnk3+wTm1XgQXiknEKkAyq5DKKIz1mzl3xkJrl0Q4IxNN5FlypoUHDJRfFWCgzcaqVEdI28LhSmJ/58Zq+4W0C45dsZWNpaIKIAY5RSack3nkjPPig2aWUzTvTtA3ahXjCtUEHLTWMbO4RkGVaWsyM2Wfpa3HXGEsNTUBJzsamejbw0hLlosntvP44XUmp6bJaVuVjKWsAxRF5Yn9Nc65RZ6/msXl9rIw7+J4p4n2JiOhSIwHd0ZxfFJwvs/wtnQNjaIDNpIpfiZ+41kO4g1EdX3WIB/nPCwsB4itxPH6/Kj1sJEtIDVIKPniLXXAzh2N3L89zo1r57k3Mc7w8Cnu3rrJ1cuXGDs7xOBAPxcGTzN0dBsjwxaGxm3U1RdvqQO0TZBlmUAwis/rJ+T7QnwlTCjwldi3EN/jMfwRL/NLHnyBCH/TGWHRVQZIkkR7awvdna30Hu6mq2M/vUe66dFq8XfoQIde72vei8Vs0s0iVACMxnrM2lDIZDIiepGFGhosWDWJmcFgEF5dZYDebSL8AwAA//8MGhqOAAAABklEQVQDAGC1+7EF/xv6AAAAAElFTkSuQmCC">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+
+<!-- Open Graph (for social sharing previews) -->
+<meta property="og:title" content="DataLens AI">
+<meta property="og:description" content="AI-powered CSV data analyst">
+<meta property="og:image" content="https://datalens135.netlify.app/">
+<meta property="og:url" content="https://datalens135.netlify.app">
+
+<!-- For React/Vite, use react-helmet-async -->
+ <meta name="msvalidate.01" content="140B77FF1475FB910FD10CA27A610CF6" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="xBuRmdftS_krvyMsc1IWPoFpIWNmt9C8YSUnpChMvzc" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+    <script type="module" crossorigin src="/assets/index-325353b1.js"></script>
+    <link rel="stylesheet" href="/assets/index-84f8979d.css">
+  </head>
+  <body>
+    <h1>DataLens AI</h1>
+    <div id="root"></div>
+    
+  </body>
+</html>
