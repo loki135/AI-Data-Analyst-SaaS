@@ -1,7 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Basic -->
+# DataLens AI - Robots.txt
+# Allow search engines to crawl public pages
+
+User-agent: *
+Allow: /
+
+# Disallow admin and internal paths
+Disallow: /admin
+Disallow: /api
+Disallow: /auth
+Disallow: /private
+
+# Sitemap location
+Sitemap: https://datalens135.netlify.app/sitemap.xml
+
 <title>DataLens AI – AI-Powered CSV Analyzer</title>
 <meta name="description" content="Upload CSV files and get instant AI insights, charts, and Q&A powered by Gemini.">
 
